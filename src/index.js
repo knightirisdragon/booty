@@ -1,7 +1,7 @@
 require("module-alias/register");
 const mongoose = require("mongoose");
 
-const bot = require('@bot/index.js');
+const bot = require('@bot/index');
 const App = require('@structures/app.js');
 const { web: {port}, discord_client: {token}, mongo_url } = require("@root/config.json");
 
