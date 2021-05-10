@@ -2,7 +2,7 @@ const { Command } = require('klasa');
 const { MessageEmbed } = require('discord.js');
 const Bots = require("@models/bots");
 
-const { server: {mod_log_id, role_ids} } = require("@root/config.json");
+const { server: {verify_channel, role_ids} } = require("@root/config.json");
 
 var modLog;
 
@@ -48,6 +48,6 @@ module.exports = class extends Command {
     }
 
     async init() {
-        modLog = await this.client.channels.fetch(mod_log_id);
+        modLog = await this.client.channels.fetch(verify_channel);
     }
 };
